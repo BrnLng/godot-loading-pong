@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=3 uid="uid://bsyb6n1vgscwd"]
+
+[ext_resource type="Script" uid="uid://dyshprj1ge1mg" path="res://scenes/sprite_2d_proto.gd" id="1_02ppr"]
+[ext_resource type="Script" uid="uid://d32c7qjohcna2" path="res://scenes/game.gd" id="1_olh0b"]
+[ext_resource type="Script" uid="uid://b47g4fbqco64g" path="res://scenes/paddle.gd" id="1_x8522"]
+[ext_resource type="Script" uid="uid://dxr7ven8m2obp" path="res://scenes/ball.gd" id="2_eotx8"]
+
+[sub_resource type="Image" id="Image_olh0b"]
+data = {
+"data": PackedByteArray(131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255),
+"format": "RGBA8",
+"height": 8,
+"mipmaps": false,
+"width": 8
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_u03e6"]
+image = SubResource("Image_olh0b")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8522"]
+size = Vector2(8, 8)
+
+[sub_resource type="Image" id="Image_2f5gb"]
+data = {
+"data": PackedByteArray(131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255, 131, 76, 33, 255),
+"format": "RGBA8",
+"height": 32,
+"mipmaps": false,
+"width": 8
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_ov7a8"]
+image = SubResource("Image_2f5gb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f5gb"]
+size = Vector2(8, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olh0b"]
+size = Vector2(640, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u03e6"]
+size = Vector2(48, 420)
+
+[node name="GameTable" type="Node2D"]
+script = ExtResource("1_olh0b")
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+position = Vector2(320, 180)
+collision_mask = 14
+script = ExtResource("2_eotx8")
+
+[node name="Sprite2D_Proto" type="Sprite2D" parent="Ball"]
+texture = SubResource("ImageTexture_u03e6")
+script = ExtResource("1_02ppr")
+img_rect_size = Vector2i(8, 8)
+img_rect_color = Color(0.5137255, 0.29803923, 0.12941177, 1)
+metadata/_custom_type_script = "uid://dyshprj1ge1mg"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("RectangleShape2D_x8522")
+
+[node name="PaddleLeft" type="CharacterBody2D" parent="."]
+position = Vector2(64, 180)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_x8522")
+
+[node name="Sprite2D_Proto" type="Sprite2D" parent="PaddleLeft"]
+texture = SubResource("ImageTexture_ov7a8")
+script = ExtResource("1_02ppr")
+img_rect_size = Vector2i(8, 32)
+img_rect_color = Color(0.5137255, 0.29803923, 0.12941177, 1)
+metadata/_custom_type_script = "uid://dyshprj1ge1mg"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaddleLeft"]
+shape = SubResource("RectangleShape2D_2f5gb")
+
+[node name="Bounds" type="Node2D" parent="."]
+
+[node name="TopWall" type="StaticBody2D" parent="Bounds"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/TopWall"]
+position = Vector2(320, -18)
+shape = SubResource("RectangleShape2D_olh0b")
+
+[node name="BottomWall" type="StaticBody2D" parent="Bounds"]
+position = Vector2(0, 395)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/BottomWall"]
+position = Vector2(320, -18)
+shape = SubResource("RectangleShape2D_olh0b")
+
+[node name="GoalLeft" type="Area2D" parent="Bounds"]
+unique_name_in_owner = true
+position = Vector2(0, -1)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/GoalLeft"]
+position = Vector2(-27, 182)
+shape = SubResource("RectangleShape2D_u03e6")
+
+[node name="GoalRight" type="Area2D" parent="Bounds"]
+unique_name_in_owner = true
+position = Vector2(694, 0)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/GoalRight"]
+position = Vector2(-27, 182)
+shape = SubResource("RectangleShape2D_u03e6")
+
+[node name="UI" type="CanvasLayer" parent="."]
